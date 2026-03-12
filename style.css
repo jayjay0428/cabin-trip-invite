@@ -32,27 +32,24 @@ body {
   inset: 0;
   pointer-events: none;
   overflow: hidden;
-  z-index: 4;
   z-index: 1;
 }
 
+/* Individual leaf */
 .leaf {
   position: absolute;
   top: -10%;
   width: 10px;
   height: 14px;
   border-radius: 70% 35% 70% 35%;
-  opacity: 0.28;
-  filter: blur(0.15px);
-  background: linear-gradient(180deg, #c48a5f, #8a5a3f);
-  animation: leafFall linear infinite;
-  will-change: transform;
   opacity: 0.24;
   filter: blur(0.15px);
   background: linear-gradient(180deg, #c48a5f, #8a5a3f);
   animation: leafFall linear infinite;
+  will-change: transform;
 }
 
+/* Variations for leaf colors */
 .leaf:nth-child(3n) {
   background: linear-gradient(180deg, #d5a36f, #9b6a47);
 }
@@ -61,6 +58,15 @@ body {
   background: linear-gradient(180deg, #b97444, #6f452f);
 }
 
+/* Falling animation */
+@keyframes leafFall {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(40px, 110vh, 0) rotate(360deg);
+  }
+}
 img {
   width: 100%;
   display: block;
