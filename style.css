@@ -573,6 +573,11 @@ main,
 
 /* Soft reveal animation */
 .reveal-on-scroll.in-view {
+.card,
+.section h2,
+.section p,
+.section li,
+figure {
   animation: fadeUp 0.5s ease both;
 }
 

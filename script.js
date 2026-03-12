@@ -23,6 +23,7 @@ navAnchors.forEach((anchor) => {
 // Live countdown timer to trip start date
 // Use numeric date parts for reliable parsing across browsers/timezones.
 const tripStartDate = new Date(2026, 8, 24, 19, 0, 0);
+const tripStartDate = new Date('2026-09-24T19:00:00');
 let hasCelebrated = false;
 
 function showCelebrationState() {
@@ -49,6 +50,10 @@ function updateCountdown() {
   const now = new Date();
   const distance = Math.max(0, tripStartDate - now);
 
+function updateCountdown() {
+  const now = new Date();
+  const distance = tripStartDate - now;
+
   const daysEl = document.getElementById('days');
   const hoursEl = document.getElementById('hours');
   const minutesEl = document.getElementById('minutes');
@@ -57,6 +62,7 @@ function updateCountdown() {
   if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
   if (distance === 0) {
+  if (distance <= 0) {
     daysEl.textContent = '0';
     hoursEl.textContent = '0';
     minutesEl.textContent = '0';
@@ -135,3 +141,4 @@ function initScrollReveal() {
 
 renderAutumnLeaves();
 initScrollReveal();
+setInterval(updateCountdown, 1000);
