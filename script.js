@@ -20,6 +20,11 @@ navAnchors.forEach((anchor) => {
   });
 });
 
+// Countdown logic
+// Trip start date: September 24, 2026 at 7:00 PM local time.
+const tripStart = new Date(2026, 8, 24, 19, 0, 0);
+let hasCelebrated = false;
+let countdownInterval;
 // Live countdown timer to trip start date
 // Use numeric date parts for reliable parsing across browsers/timezones.
 const tripStartDate = new Date(2026, 8, 24, 19, 0, 0);
@@ -48,6 +53,7 @@ function showCelebrationState() {
 
 function updateCountdown() {
   const now = new Date();
+  const distance = Math.max(0, tripStart - now);
   const distance = Math.max(0, tripStartDate - now);
 
 function updateCountdown() {
@@ -68,6 +74,9 @@ function updateCountdown() {
     minutesEl.textContent = '0';
     secondsEl.textContent = '0';
     showCelebrationState();
+    if (countdownInterval) {
+      clearInterval(countdownInterval);
+    }
     return;
   }
 
@@ -82,6 +91,10 @@ function updateCountdown() {
   secondsEl.textContent = String(seconds).padStart(2, '0');
 }
 
+function startCountdown() {
+  updateCountdown();
+  countdownInterval = setInterval(updateCountdown, 1000);
+}
 updateCountdown();
 const countdownInterval = setInterval(() => {
   updateCountdown();
@@ -139,6 +152,18 @@ function initScrollReveal() {
   revealTargets.forEach((el) => observer.observe(el));
 }
 
+// Ensure countdown/leaves start only after DOM is ready.
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    startCountdown();
+    renderAutumnLeaves();
+    initScrollReveal();
+  });
+} else {
+  startCountdown();
+  renderAutumnLeaves();
+  initScrollReveal();
+}
 renderAutumnLeaves();
 initScrollReveal();
 setInterval(updateCountdown, 1000);
