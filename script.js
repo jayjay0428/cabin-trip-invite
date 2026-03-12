@@ -22,31 +22,10 @@ navAnchors.forEach((anchor) => {
 
 // Live countdown timer to trip start date
 const tripStartDate = new Date('2026-09-24T19:00:00');
-let hasCelebrated = false;
-
-function showCelebrationState() {
-  if (hasCelebrated) return;
-
-  const countdownGrid = document.getElementById('countdown-grid');
-  const celebrationBanner = document.getElementById('celebration-banner');
-
-  if (countdownGrid) {
-    countdownGrid.classList.add('fade-out');
-  }
-
-  // Slight delay keeps transition smooth and intentional
-  setTimeout(() => {
-    if (celebrationBanner) {
-      celebrationBanner.classList.add('show');
-    }
-  }, 240);
-
-  hasCelebrated = true;
-}
 
 function updateCountdown() {
   const now = new Date();
-  const distance = Math.max(0, tripStartDate - now);
+  const distance = tripStartDate - now;
 
   const daysEl = document.getElementById('days');
   const hoursEl = document.getElementById('hours');
@@ -55,12 +34,11 @@ function updateCountdown() {
 
   if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
-  if (distance === 0) {
+  if (distance <= 0) {
     daysEl.textContent = '0';
     hoursEl.textContent = '0';
     minutesEl.textContent = '0';
     secondsEl.textContent = '0';
-    showCelebrationState();
     return;
   }
 
@@ -76,11 +54,4 @@ function updateCountdown() {
 }
 
 updateCountdown();
-const countdownInterval = setInterval(() => {
-  updateCountdown();
-
-  const now = new Date();
-  if (tripStartDate - now <= 0) {
-    clearInterval(countdownInterval);
-  }
-}, 1000);
+setInterval(updateCountdown, 1000);

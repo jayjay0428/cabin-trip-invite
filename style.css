@@ -204,15 +204,12 @@ h2 {
 
 .countdown-card {
   text-align: center;
-  position: relative;
-  overflow: hidden;
 }
 
 .countdown-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(120px, 1fr));
   gap: 0.8rem;
-  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .countdown-grid div {
@@ -226,66 +223,6 @@ h2 {
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--brown-900);
-}
-
-.countdown-grid.fade-out {
-  opacity: 0;
-  transform: translateY(-8px);
-  pointer-events: none;
-}
-
-.celebration-banner {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transform: translateY(8px);
-  transition: opacity 0.7s ease, transform 0.7s ease, max-height 0.7s ease;
-  margin-top: 0;
-  background: linear-gradient(180deg, #fff6eb, #ffffff);
-  border-radius: 14px;
-}
-
-.celebration-banner.show {
-  opacity: 1;
-  transform: translateY(0);
-  max-height: 220px;
-  margin-top: 0.8rem;
-  padding: 1rem 0.75rem;
-}
-
-.celebration-banner p {
-  margin: 0;
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--brown-900);
-}
-
-.confetti {
-  margin-top: 0.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 0.45rem;
-}
-
-.confetti span {
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  display: block;
-  background: #d7b48e;
-  animation: confettiFloat 2.3s ease-in-out infinite;
-}
-
-.confetti span:nth-child(2),
-.confetti span:nth-child(5) {
-  background: #8d6e63;
-  animation-delay: 0.2s;
-}
-
-.confetti span:nth-child(3),
-.confetti span:nth-child(6) {
-  background: #f0d8bc;
-  animation-delay: 0.4s;
 }
 
 .note {
@@ -305,110 +242,6 @@ h2 {
 
 .two-col {
   columns: 1;
-}
-
-.quick-essentials {
-  margin-bottom: 1rem;
-  border: 1px solid rgba(93, 64, 55, 0.12);
-  background: linear-gradient(180deg, #fffaf4, #ffffff);
-}
-
-.packing-grid {
-  display: grid;
-  gap: 0.9rem;
-}
-
-.packing-card {
-  border-top: 4px solid rgba(93, 64, 55, 0.18);
-}
-
-.outfit-card {
-  border-left: 4px solid rgba(93, 64, 55, 0.25);
-}
-
-.outdoor-grid {
-  grid-template-columns: 1fr;
-}
-
-.weather-card {
-  border-left: 4px solid rgba(93, 64, 55, 0.2);
-  background: linear-gradient(180deg, #fffdf9, #ffffff);
-}
-
-.guest-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-}
-
-.guest-chip {
-  background: var(--beige-100);
-  color: var(--brown-900);
-  border: 1px solid rgba(93, 64, 55, 0.18);
-  border-radius: 999px;
-  padding: 0.35rem 0.72rem;
-  font-size: 0.92rem;
-  font-weight: 600;
-}
-
-.guest-birthday {
-  background: #fff2e2;
-  border-color: rgba(93, 64, 55, 0.35);
-}
-
-.guest-placeholder {
-  margin-top: 0.75rem;
-  border: 1px dashed rgba(93, 64, 55, 0.35);
-  border-radius: 12px;
-  padding: 0.75rem;
-  color: var(--muted);
-  text-align: center;
-}
-
-.playlist-card {
-  border-top: 4px solid rgba(93, 64, 55, 0.18);
-}
-
-.spotify-wrap {
-  margin-top: 0.5rem;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(62, 39, 35, 0.1);
-}
-
-.spotify-wrap iframe {
-  width: 100%;
-  border: 0;
-  height: 352px;
-}
-
-.memory-card {
-  background: linear-gradient(180deg, #ffffff, #fff7ee);
-}
-
-.polaroid-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.7rem;
-}
-
-.polaroid {
-  background: #fff;
-  border-radius: 10px;
-  border: 1px solid rgba(93, 64, 55, 0.15);
-  box-shadow: 0 6px 16px rgba(62, 39, 35, 0.08);
-  aspect-ratio: 1 / 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-}
-
-.polaroid small {
-  font-size: 0.75rem;
-  margin-top: 0.35rem;
-  color: var(--muted);
 }
 
 .gallery-grid {
@@ -489,18 +322,6 @@ h2 {
   .rsvp-wrap {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .packing-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .outdoor-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .spotify-wrap iframe {
-    height: 380px;
-  }
 }
 
 /* Soft reveal animation */
@@ -520,17 +341,5 @@ figure {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes confettiFloat {
-  0%,
-  100% {
-    transform: translateY(0);
-    opacity: 0.7;
-  }
-  50% {
-    transform: translateY(-7px);
-    opacity: 1;
   }
 }
