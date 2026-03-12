@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Cottage Getaway</title>
+    <meta
+      name="description"
+      content="A cozy birthday weekend celebration in Trent Lakes, Ontario."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header / Navigation -->
+    <header class="site-header">
+      <nav class="nav container">
+        <a href="#top" class="brand">🤎 Birthday Cottage Getaway</a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">
+          ☰
+        </button>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#details">Details</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#payment">Payment</a></li>
+          <li><a href="#rsvp">RSVP</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- Hero Section -->
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">September Birthday Escape ✨</p>
+            <h1>Birthday Cottage Getaway</h1>
+            <p class="hero-subtitle">A cozy birthday weekend celebration</p>
+            <p class="hero-meta">
+              <strong>Thursday, September 24 to Sunday, September 27</strong><br />
+              Trent Lakes, Ontario
+            </p>
+            <p>
+              You’re invited to a warm and memorable birthday weekend in a beautiful
+              cottage setting, filled with laughter, comfort, celebration, and quality
+              time with close friends.
+            </p>
+            <div class="button-group">
+              <a class="btn btn-primary" href="#rsvp">RSVP Now</a>
+              <a
+                class="btn btn-secondary"
+                href="https://www.airbnb.ca/rooms/963649346292702610?viralityEntryPoint=1&s=76"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Airbnb</a
+              >
+            </div>
+          </div>
+          <div class="hero-card card">
+            <h2>Weekend Highlights 💫</h2>
+            <ul class="checklist">
+              <li>Transportation included</li>
+              <li>Meals covered by organizer</li>
+              <li>Birthday moments + group bonding</li>
+              <li>Cozy cottage vibes all weekend</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Countdown Section -->
+      <section class="section alt-bg" id="countdown">
+        <div class="container card countdown-card">
+          <h2>Countdown to the Getaway ⏳</h2>
+          <p>Counting down to our special birthday weekend together.</p>
+          <div class="countdown-grid" aria-live="polite" id="countdown-grid">
+            <div><span id="days">0</span><small>Days</small></div>
+            <div><span id="hours">0</span><small>Hours</small></div>
+            <div><span id="minutes">0</span><small>Minutes</small></div>
+            <div><span id="seconds">0</span><small>Seconds</small></div>
+          </div>
+          <!-- Countdown celebration state -->
+          <div class="celebration-banner" id="celebration-banner" role="status" aria-live="polite">
+            <p>The birthday weekend is finally here ✨</p>
+            <div class="confetti" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trip Overview Section -->
+      <section class="section" id="overview">
+        <div class="container">
+          <h2>Trip Overview</h2>
+          <p>
+            This birthday cottage trip is for close friends to celebrate together in a
+            cozy, joyful atmosphere. Transportation is included, meals are covered by
+            the organizer, and early confirmations help finalize all planning details.
+            Expect fun activities, relaxing moments, genuine bonding, and unforgettable
+            birthday celebrations.
+          </p>
+        </div>
+      </section>
+
+      <!-- Who's Coming Section -->
+      <section class="section alt-bg" id="guest-list">
+        <div class="container">
+          <h2>Who’s Coming</h2>
+          <div class="rsvp-wrap">
+            <article class="card">
+              <h3>Confirmed Guests ✅</h3>
+              <div class="guest-chips">
+                <span class="guest-chip">Me</span>
+                <span class="guest-chip">Sheva</span>
+                <span class="guest-chip">Anselm</span>
+                <span class="guest-chip guest-birthday">Steph (Birthday Girl)</span>
+                <span class="guest-chip">Jesse</span>
+                <span class="guest-chip">Nifemi</span>
+              </div>
+            </article>
+            <article class="card">
+              <h3>Awaiting RSVP ⏳</h3>
+              <p class="note">No pending names right now — add guests here as responses come in.</p>
+              <div class="guest-placeholder">+ Add name</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trip Details Section -->
+      <section class="section alt-bg" id="details">
+        <div class="container">
+          <h2>Trip Details</h2>
+          <div class="card-grid">
+            <article class="card"><h3>📍 Location</h3><p>Trent Lakes, Ontario cottage stay.</p></article>
+            <article class="card"><h3>🚗 Travel Time</h3><p>Approx. 3 hours 30 minutes.</p></article>
+            <article class="card"><h3>🛏 Accommodation</h3><p>Stay is fully provided for all confirmed guests.</p></article>
+            <article class="card"><h3>🚌 Transportation</h3><p>To and from the cottage is included.</p></article>
+            <article class="card"><h3>🍽 Meals</h3><p>Covered by the organizer throughout the trip.</p></article>
+            <article class="card"><h3>🤍 Experience</h3><p>A shared group getaway full of celebration and connection.</p></article>
+          </div>
+          <p class="note">
+            Note: Some outdoor activities may be adjusted depending on weather.
+          </p>
+        </div>
+      </section>
+
+      <!-- Schedule Section -->
+      <section class="section" id="schedule">
+        <div class="container">
+          <h2>Trip Schedule</h2>
+          <div class="timeline">
+            <article class="card timeline-item">
+              <h3>Thursday, September 24 – Arrival Night</h3>
+              <p class="theme">Theme: Cozy Welcome Energy</p>
+              <p><strong>Arrival Time:</strong> 7:00PM to 8:00PM</p>
+              <ul>
+                <li>Arrival and room selection</li>
+                <li>Cabin tour</li>
+                <li>Welcome drinks and light snacks</li>
+                <li>Icebreaker games</li>
+                <li>Midnight birthday countdown</li>
+              </ul>
+            </article>
+
+            <article class="card timeline-item">
+              <h3>Friday, September 25 – Birthday Day</h3>
+              <p class="theme">Theme: Main Character Energy</p>
+              <ul>
+                <li>Cooking</li>
+                <li>Birthday picnic</li>
+                <li>Outdoor birthday pictures</li>
+                <li>Games</li>
+                <li>Cake cutting and gift session</li>
+                <li>Dessert and dance moment</li>
+                <li>Dinner, drinks, and fun</li>
+              </ul>
+            </article>
+
+            <article class="card timeline-item">
+              <h3>Saturday, September 26 – Adventure and Bonding Day</h3>
+              <p class="theme">Theme: Fun, Free, Cozy</p>
+              <ul>
+                <li>Nature walk or outdoor games</li>
+                <li>Kayaking or canoeing</li>
+                <li>Swimming</li>
+                <li>Drive around Trent Lakes</li>
+                <li>BBQ afternoon</li>
+                <li>Dance session</li>
+                <li>Game night tournament</li>
+                <li>Campfire, marshmallows, and appreciation circle</li>
+              </ul>
+            </article>
+
+            <article class="card timeline-item">
+              <h3>Sunday, September 27 – Breakfast and Departure</h3>
+              <p class="theme">Theme: Soft Goodbye</p>
+              <ul>
+                <li>Farewell breakfast</li>
+                <li>Final group pictures</li>
+                <li>Clean-up and pack</li>
+                <li>Departure</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Complete Packing List Section -->
+      <section class="section alt-bg" id="bring">
+        <div class="container">
+          <h2>Complete Packing List</h2>
+
+          <!-- Quick Essentials Summary -->
+          <article class="card quick-essentials">
+            <h3>Quick Essentials ✨</h3>
+            <ul class="checklist two-col">
+              <li>Comfortable clothes + light layers</li>
+              <li>Supportive outdoor shoes</li>
+              <li>Phone charger + power bank</li>
+              <li>Toiletries and hygiene products</li>
+              <li>Reusable water bottle</li>
+              <li>Sunscreen SPF 30+</li>
+              <li>Towel + swim essentials</li>
+              <li>Any medications needed</li>
+            </ul>
+          </article>
+
+          <!-- Grouped Packing Categories -->
+          <div class="packing-grid">
+            <article class="card packing-card">
+              <h3>👗 Clothing</h3>
+              <ul class="checklist">
+                <li>Comfortable clothes</li>
+                <li>Warm sweater or jacket</li>
+                <li>Outdoor shoes / sneakers</li>
+                <li>Sleepwear / pajamas</li>
+                <li>Swimsuit</li>
+                <li>Extra socks</li>
+                <li>Flip flops</li>
+                <li>Water shoes or sandals</li>
+                <li>Hoodie or oversized sweater</li>
+                <li>Sweatpants or lounge pants</li>
+                <li>Slides or indoor slippers</li>
+                <li>Underwear</li>
+                <li>Laundry bag for dirty clothes (if needed)</li>
+              </ul>
+            </article>
+
+            <article class="card packing-card">
+              <h3>🧴 Toiletries &amp; Personal Care</h3>
+              <ul class="checklist">
+                <li>Toiletries (toothbrush, toothpaste, body wash, etc.)</li>
+                <li>Sunscreen SPF 30+</li>
+                <li>Lip balm</li>
+                <li>Hygiene products</li>
+                <li>Wet wipes</li>
+                <li>Hand sanitizer</li>
+                <li>Portable mirror</li>
+              </ul>
+            </article>
+
+            <article class="card packing-card">
+              <h3>🥾 Hiking &amp; Outdoor Essentials</h3>
+              <ul class="checklist">
+                <li>Small backpack or daypack</li>
+                <li>Reusable water bottle</li>
+                <li>Sunglasses</li>
+                <li>Hat or cap</li>
+                <li>Portable phone power bank</li>
+                <li>Snacks for hiking</li>
+              </ul>
+            </article>
+
+            <article class="card packing-card">
+              <h3>🛶 Canoeing &amp; Water Activities</h3>
+              <ul class="checklist">
+                <li>Quick-dry towel or microfiber towel</li>
+                <li>Dry bag for valuables</li>
+              </ul>
+            </article>
+
+            <article class="card packing-card">
+              <h3>🏖 Swimming &amp; Beach Time</h3>
+              <ul class="checklist">
+                <li>Towel</li>
+                <li>Cover-up or light beach outfit</li>
+                <li>Flip flops</li>
+                <li>Body lotion or body oil after swimming</li>
+              </ul>
+            </article>
+
+            <article class="card packing-card">
+              <h3>🔥 Cozy Cottage &amp; Campfire</h3>
+              <ul class="checklist">
+                <li>Blanket or shawl</li>
+                <li>Card games or Uno (if you have any)</li>
+              </ul>
+            </article>
+
+            <article class="card packing-card">
+              <h3>📸 Photos, Vlogging &amp; Memories (Optional)</h3>
+              <ul class="checklist">
+                <li>Digital camera</li>
+                <li>Extra SD card</li>
+                <li>Tripod or mini phone stand</li>
+                <li>Phone charger</li>
+                <li>Portable power bank</li>
+                <li>Polaroid camera (optional)</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Birthday Picnic Outfit Theme Section -->
+      <section class="section" id="outfit-theme">
+        <div class="container">
+          <h2>Birthday Picnic Outfit Theme</h2>
+          <div class="card outfit-card">
+            <p><strong>Theme idea:</strong> Boho Soft picnic / summer birthday aesthetic.</p>
+            <p>
+              Think soft, pretty, effortless, warm, glowy, feminine, airy, and
+              photo-friendly. The goal is a polished but relaxed look that feels
+              beautiful in birthday photos while still being comfortable enough to move,
+              laugh, eat, and enjoy the day.
+            </p>
+            <ul class="checklist two-col">
+              <li>Flowy dresses</li>
+              <li>Soft neutral tones</li>
+              <li>Beige, cream, white, brown, muted earthy colors</li>
+              <li>Cute sandals or simple flats</li>
+              <li>Minimal gold accessories</li>
+              <li>Soft curls, braids, or natural glam</li>
+              <li>Picnic-friendly outfits that still photograph beautifully</li>
+            </ul>
+            <p class="note">
+              Dress in a way that matches the aesthetic while staying comfortable and
+              true to your personal style.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outdoor Planning Reminder Section -->
+      <section class="section alt-bg" id="outdoor-prep">
+        <div class="container">
+          <h2>Hiking &amp; Outdoor Planning</h2>
+          <div class="card-grid outdoor-grid">
+            <article class="card">
+              <h3>Comfort + Practicality</h3>
+              <p>
+                Hiking outfits should be comfortable, practical, and weather-appropriate
+                so everyone can enjoy outdoor moments with ease.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Must-Haves</h3>
+              <ul class="checklist">
+                <li>Supportive shoes</li>
+                <li>Reusable water bottle</li>
+                <li>Light layers for changing temperatures</li>
+                <li>Sunscreen before heading out</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Intentional Planning</h3>
+              <p>
+                Outdoor activities are part of the fun, so bring what you need to stay
+                comfortable, safe, and ready for weather changes.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Weather Preview Section -->
+      <section class="section" id="weather">
+        <div class="container">
+          <h2>Trent Lakes Weather Preview</h2>
+          <article class="card weather-card">
+            <h3>🍂 Late September forecast vibe</h3>
+            <p>
+              Expect cozy evenings and cooler outdoor moments. Mornings and nights can
+              feel chilly, so it’s best to pack warm layers even if daytime weather is
+              mild.
+            </p>
+            <ul class="checklist two-col">
+              <li>Bring a sweater, hoodie, or jacket for nights</li>
+              <li>Choose comfortable outdoor clothing</li>
+              <li>Wear practical shoes for walking and hiking</li>
+              <li>Outdoor activities may feel cooler early and later in the day</li>
+            </ul>
+            <p class="note">
+              This supports the packing and hiking prep sections—dress smart for changing
+              temperatures so you can stay cozy and enjoy every activity.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Helping Out Section -->
+      <section class="section" id="helping-out">
+        <div class="container">
+          <h2>Contribution / Helping Out</h2>
+          <p>
+            Everyone can help make this trip smooth, fun, and extra special. In the
+            RSVP form, you can indicate what you’d love to support with.
+          </p>
+          <div class="card-grid">
+            <article class="card"><p>Helping with setup</p></article>
+            <article class="card"><p>Bringing snacks or drinks</p></article>
+            <article class="card"><p>Helping with decorating</p></article>
+            <article class="card"><p>Assisting with cooking</p></article>
+            <article class="card"><p>Helping clean up</p></article>
+            <article class="card"><p>Organizing games or music</p></article>
+            <article class="card"><p>Taking pictures</p></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stay Details Section -->
+      <section class="section alt-bg" id="stay">
+        <div class="container">
+          <h2>Stay Details</h2>
+          <ul class="checklist card">
+            <li>Sleeping arrangements will be confirmed after RSVPs are collected.</li>
+            <li>Shared cottage experience.</li>
+            <li>Respectful, fun, and cozy environment.</li>
+            <li>Room selection may depend on final group planning.</li>
+            <li>Please be mindful of shared spaces and group comfort.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Payment Section -->
+      <section class="section" id="payment">
+        <div class="container">
+          <h2>Payment Details</h2>
+          <article class="card payment-card">
+            <p><strong>Hey loves,</strong><br />I’m so excited to celebrate my birthday with you all this September.</p>
+            <p><strong>The cost of the cottage per person is $530.</strong></p>
+            <p>This includes:</p>
+            <ul>
+              <li>Accommodation</li>
+              <li>Transportation to and from the cottage</li>
+            </ul>
+            <p>I will be covering feeding for the entire stay, so your payment strictly covers:</p>
+            <ul>
+              <li>Stay</li>
+              <li>Transportation</li>
+            </ul>
+            <h3>Payment Plan</h3>
+            <ul>
+              <li>1st Payment: <strong>$265</strong> — Due April 20</li>
+              <li>2nd Payment: <strong>$265</strong> — Due August 15</li>
+            </ul>
+            <p class="note"><strong>Important note:</strong> First payment is non-refundable once made, as bookings and arrangements will be secured based on confirmations.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="section alt-bg" id="faq">
+        <div class="container">
+          <h2>FAQ / Good to Know</h2>
+          <ul class="checklist card">
+            <li>Transportation is included.</li>
+            <li>Meals are covered by the organizer.</li>
+            <li>First payment is non-refundable.</li>
+            <li>Guests should RSVP early.</li>
+            <li>Outdoor plans may adjust slightly depending on weather.</li>
+            <li>Final trip reminders will be shared before departure.</li>
+            <li>Bring any personal items you may need for comfort.</li>
+            <li>Respect the cottage, shared rooms, and group plans.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- The Vibe Section -->
+      <section class="section" id="vibe">
+        <div class="container">
+          <h2>The Vibe</h2>
+          <p class="card">
+            Think cozy mornings, stylish birthday moments, laughter-filled evenings,
+            soft sweaters, warm drinks, sunset photos, games, dancing, and memory-making
+            with people who truly matter. This weekend is all about fun, comfort,
+            celebration, and connection.
+          </p>
+        </div>
+      </section>
+
+      <!-- Birthday Trip Playlist Section -->
+      <section class="section alt-bg" id="playlist">
+        <div class="container">
+          <h2>Birthday Trip Playlist</h2>
+          <article class="card playlist-card">
+            <p>
+              Tap into the birthday getaway mood before we hit the road—soft, fun,
+              celebratory, and full of main-character energy.
+            </p>
+            <div class="spotify-wrap">
+              <iframe
+                title="Birthday Trip Playlist"
+                src="https://open.spotify.com/embed/playlist/45g2fNcLYzGzXxfHjVqIci?utm_source=generator"
+                loading="lazy"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              ></iframe>
+            </div>
+            <div class="button-group">
+              <a
+                class="btn btn-primary"
+                href="https://open.spotify.com/playlist/45g2fNcLYzGzXxfHjVqIci?si=n3tFUYVmTjabRDYe7olZzQ&pt=68a3be5d44f439c63555495ea51112c6&pi=obTlxPZSQEG8R"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open in Spotify</a
+              >
+            </div>
+            <p class="note">Listen before the trip so we all arrive in full birthday vibe mode ✨</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Photo Gallery Section -->
+      <section class="section alt-bg" id="gallery">
+        <div class="container">
+          <h2>Photo Vibes</h2>
+          <div class="gallery-grid">
+            <figure class="card"><img src="https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?auto=format&fit=crop&w=900&q=80" alt="Birthday cake and candles" /><figcaption>Birthday glow ✨</figcaption></figure>
+            <figure class="card"><img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=900&q=80" alt="Cozy cottage in nature" /><figcaption>Cottage calm 🌲</figcaption></figure>
+            <figure class="card"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=900&q=80" alt="Friends laughing together" /><figcaption>Friendship memories 🤍</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Memory Wall Section -->
+      <section class="section" id="memory-wall">
+        <div class="container">
+          <h2>Moments to Share</h2>
+          <div class="rsvp-wrap">
+            <article class="card memory-card">
+              <p>
+                Join our shared album and upload your favorite pictures and videos from
+                the getaway. Let’s keep all the beautiful memories in one cozy place.
+              </p>
+              <a
+                class="btn btn-primary"
+                href="https://www.icloud.com/sharedalbum/#B225oqs3qrkIvQD"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Join Shared Album</a
+              >
+            </article>
+            <article class="card polaroid-grid">
+              <div class="polaroid">📷<small>Cabin laughs</small></div>
+              <div class="polaroid">🌲<small>Nature moments</small></div>
+              <div class="polaroid">🎂<small>Birthday glow</small></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Before You Go Section -->
+      <section class="section" id="before-you-go">
+        <div class="container">
+          <h2>Before You Go</h2>
+          <ul class="checklist card">
+            <li>RSVP as early as possible to confirm your spot.</li>
+            <li>Complete payment milestones on time.</li>
+            <li>Pack essentials and weather-ready items.</li>
+            <li>Share dietary needs and allergies in the RSVP form.</li>
+            <li>Come ready for good energy, flexibility, and fun.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- RSVP Section -->
+      <section class="section alt-bg" id="rsvp">
+        <div class="container">
+          <h2>RSVP</h2>
+          <div class="rsvp-wrap">
+            <article class="card">
+              <p>
+                Please confirm your spot through the Google Form so planning,
+                transportation, room setup, and activities can be finalized.
+              </p>
+              <a
+                class="btn btn-primary"
+                href="https://forms.gle/gEsXQFKMNrugbzGc9"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open RSVP Form</a
+              >
+            </article>
+            <article class="card">
+              <h3>Form Preview</h3>
+              <ul>
+                <li>Full name</li>
+                <li>Phone number</li>
+                <li>Email address</li>
+                <li>Will you be attending? (yes/no)</li>
+                <li>Will you take the rental car or find your own way?</li>
+                <li>If not riding with group, how will you get there?</li>
+                <li>Any allergies?</li>
+                <li>Any dietary restrictions?</li>
+                <li>What would you like to help with?</li>
+                <li>Can you help with setup/decor/snacks/games/cooking/cleanup/music/photos?</li>
+                <li>Preferred roommate / room buddy</li>
+                <li>Emergency contact name and phone number</li>
+                <li>Anything else we should know?</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          Thank you for being part of this special birthday getaway. I can’t wait to
+          celebrate, laugh, relax, and make beautiful memories together.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
