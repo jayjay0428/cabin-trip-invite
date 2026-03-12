@@ -25,11 +25,6 @@ navAnchors.forEach((anchor) => {
 const tripStart = new Date(2026, 8, 24, 19, 0, 0);
 let hasCelebrated = false;
 let countdownInterval;
-// Live countdown timer to trip start date
-// Use numeric date parts for reliable parsing across browsers/timezones.
-const tripStartDate = new Date(2026, 8, 24, 19, 0, 0);
-const tripStartDate = new Date('2026-09-24T19:00:00');
-let hasCelebrated = false;
 
 function showCelebrationState() {
   if (hasCelebrated) return;
@@ -54,11 +49,6 @@ function showCelebrationState() {
 function updateCountdown() {
   const now = new Date();
   const distance = Math.max(0, tripStart - now);
-  const distance = Math.max(0, tripStartDate - now);
-
-function updateCountdown() {
-  const now = new Date();
-  const distance = tripStartDate - now;
 
   const daysEl = document.getElementById('days');
   const hoursEl = document.getElementById('hours');
@@ -67,7 +57,6 @@ function updateCountdown() {
 
   if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
-  if (distance === 0) {
   if (distance <= 0) {
     daysEl.textContent = '0';
     hoursEl.textContent = '0';
@@ -152,18 +141,9 @@ function initScrollReveal() {
   revealTargets.forEach((el) => observer.observe(el));
 }
 
-// Ensure countdown/leaves start only after DOM is ready.
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    startCountdown();
-    renderAutumnLeaves();
-    initScrollReveal();
-  });
-} else {
+// Initialize once on page load.
+document.addEventListener('DOMContentLoaded', () => {
   startCountdown();
   renderAutumnLeaves();
   initScrollReveal();
-}
-renderAutumnLeaves();
-initScrollReveal();
-setInterval(updateCountdown, 1000);
+});
