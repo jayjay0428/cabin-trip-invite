@@ -48,6 +48,10 @@ function updateCountdown() {
   const now = new Date();
   const distance = Math.max(0, tripStartDate - now);
 
+function updateCountdown() {
+  const now = new Date();
+  const distance = tripStartDate - now;
+
   const daysEl = document.getElementById('days');
   const hoursEl = document.getElementById('hours');
   const minutesEl = document.getElementById('minutes');
@@ -56,6 +60,7 @@ function updateCountdown() {
   if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
   if (distance === 0) {
+  if (distance <= 0) {
     daysEl.textContent = '0';
     hoursEl.textContent = '0';
     minutesEl.textContent = '0';
@@ -84,3 +89,4 @@ const countdownInterval = setInterval(() => {
     clearInterval(countdownInterval);
   }
 }, 1000);
+setInterval(updateCountdown, 1000);
