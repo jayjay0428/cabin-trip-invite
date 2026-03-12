@@ -84,6 +84,15 @@ function startCountdown() {
   updateCountdown();
   countdownInterval = setInterval(updateCountdown, 1000);
 }
+updateCountdown();
+const countdownInterval = setInterval(() => {
+  updateCountdown();
+
+  const now = new Date();
+  if (tripStartDate - now <= 0) {
+    clearInterval(countdownInterval);
+  }
+}, 1000);
 
 // Autumn leaves animation setup
 function renderAutumnLeaves() {
