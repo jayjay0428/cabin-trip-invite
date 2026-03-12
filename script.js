@@ -21,6 +21,8 @@ navAnchors.forEach((anchor) => {
 });
 
 // Live countdown timer to trip start date
+// Use numeric date parts for reliable parsing across browsers/timezones.
+const tripStartDate = new Date(2026, 8, 24, 19, 0, 0);
 const tripStartDate = new Date('2026-09-24T19:00:00');
 let hasCelebrated = false;
 
@@ -89,4 +91,54 @@ const countdownInterval = setInterval(() => {
     clearInterval(countdownInterval);
   }
 }, 1000);
+
+// Autumn leaves animation setup
+function renderAutumnLeaves() {
+  const leavesContainer = document.getElementById('autumn-leaves');
+  if (!leavesContainer) return;
+
+  const isMobile = window.matchMedia('(max-width: 760px)').matches;
+  const leafCount = isMobile ? 10 : 16;
+
+  leavesContainer.innerHTML = '';
+
+  for (let i = 0; i < leafCount; i += 1) {
+    const leaf = document.createElement('span');
+    leaf.className = 'leaf';
+    leaf.style.left = `${Math.random() * 100}%`;
+    leaf.style.animationDuration = `${8 + Math.random() * 8}s`;
+    leaf.style.animationDelay = `${Math.random() * 7}s`;
+    leaf.style.opacity = `${0.14 + Math.random() * 0.14}`;
+    leaf.style.transform = `scale(${0.8 + Math.random() * 0.8})`;
+    leavesContainer.appendChild(leaf);
+  }
+}
+
+// Soft reveal animations when sections scroll into view
+function initScrollReveal() {
+  const revealTargets = document.querySelectorAll('.section, .card, figure');
+  revealTargets.forEach((el) => el.classList.add('reveal-on-scroll'));
+
+  if (!('IntersectionObserver' in window)) {
+    revealTargets.forEach((el) => el.classList.add('in-view'));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.14, rootMargin: '0px 0px -6% 0px' }
+  );
+
+  revealTargets.forEach((el) => observer.observe(el));
+}
+
+renderAutumnLeaves();
+initScrollReveal();
 setInterval(updateCountdown, 1000);

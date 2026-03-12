@@ -26,6 +26,35 @@ body {
   line-height: 1.6;
 }
 
+/* Autumn leaves layer */
+.autumn-leaves {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.leaf {
+  position: absolute;
+  top: -10%;
+  width: 10px;
+  height: 14px;
+  border-radius: 70% 35% 70% 35%;
+  opacity: 0.24;
+  filter: blur(0.15px);
+  background: linear-gradient(180deg, #c48a5f, #8a5a3f);
+  animation: leafFall linear infinite;
+}
+
+.leaf:nth-child(3n) {
+  background: linear-gradient(180deg, #d5a36f, #9b6a47);
+}
+
+.leaf:nth-child(4n) {
+  background: linear-gradient(180deg, #b97444, #6f452f);
+}
+
 img {
   width: 100%;
   display: block;
@@ -57,6 +86,7 @@ h2 {
 
 .section {
   padding: 3.4rem 0;
+  transition: opacity 0.45s ease, transform 0.45s ease;
 }
 
 .alt-bg {
@@ -70,6 +100,13 @@ h2 {
   backdrop-filter: blur(10px);
   background: rgba(249, 244, 238, 0.9);
   border-bottom: 1px solid rgba(93, 64, 55, 0.08);
+}
+
+main,
+.site-header,
+.site-footer {
+  position: relative;
+  z-index: 2;
 }
 
 .nav {
@@ -162,6 +199,8 @@ h2 {
 .btn-primary {
   background: var(--brown-900);
   color: var(--white);
+  box-shadow: 0 0 0 rgba(93, 64, 55, 0.3);
+  animation: pulseGlow 2.8s ease-in-out infinite;
 }
 
 .btn-secondary {
@@ -175,6 +214,23 @@ h2 {
   border-radius: var(--radius);
   padding: 1.1rem;
   box-shadow: var(--shadow);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(62, 39, 35, 0.15);
+}
+
+/* Reveal on scroll animation support */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.reveal-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card-grid {
@@ -516,6 +572,7 @@ h2 {
 }
 
 /* Soft reveal animation */
+.reveal-on-scroll.in-view {
 .card,
 .section h2,
 .section p,
@@ -544,5 +601,36 @@ figure {
   50% {
     transform: translateY(-7px);
     opacity: 1;
+  }
+}
+
+@keyframes leafFall {
+  0% {
+    transform: translate3d(0, -8vh, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(16vw, 112vh, 0) rotate(290deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(93, 64, 55, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(93, 64, 55, 0.22);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leaf,
+  .btn-primary,
+  .card,
+  .reveal-on-scroll {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
   }
 }
