@@ -27,27 +27,29 @@ body {
 }
 
 /* Autumn leaves layer */
-#autumn-leaves {
+.autumn-leaves {
   position: fixed;
   inset: 0;
   pointer-events: none;
   overflow: hidden;
-  z-index: 4;
+  z-index: 1;
 }
 
+/* Individual leaf */
 .leaf {
   position: absolute;
   top: -10%;
   width: 10px;
   height: 14px;
   border-radius: 70% 35% 70% 35%;
-  opacity: 0.28;
+  opacity: 0.24;
   filter: blur(0.15px);
   background: linear-gradient(180deg, #c48a5f, #8a5a3f);
   animation: leafFall linear infinite;
   will-change: transform;
 }
 
+/* Variations for leaf colors */
 .leaf:nth-child(3n) {
   background: linear-gradient(180deg, #d5a36f, #9b6a47);
 }
@@ -430,6 +432,46 @@ main,
   background: linear-gradient(180deg, #ffffff, #fff7ee);
 }
 
+.polaroid-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.polaroid {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(93, 64, 55, 0.15);
+  box-shadow: 0 6px 16px rgba(62, 39, 35, 0.08);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.polaroid small {
+  font-size: 0.75rem;
+  margin-top: 0.35rem;
+  color: var(--muted);
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.gallery-grid figure {
+  margin: 0;
+}
+
+.gallery-grid figcaption {
+  margin-top: 0.6rem;
+  font-weight: 600;
+  color: var(--brown-700);
+}
+
 .rsvp-wrap {
   display: grid;
   gap: 1rem;
@@ -492,6 +534,10 @@ main,
     columns: 2;
   }
 
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .rsvp-wrap {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -515,6 +561,11 @@ main,
 
 /* Soft reveal animation */
 .reveal-on-scroll.in-view {
+.card,
+.section h2,
+.section p,
+.section li,
+figure {
   animation: fadeUp 0.5s ease both;
 }
 

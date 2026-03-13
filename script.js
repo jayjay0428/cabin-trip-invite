@@ -85,6 +85,7 @@ function startCountdown() {
   countdownInterval = setInterval(updateCountdown, 1000);
 }
 
+
 // Autumn leaves animation setup
 function renderAutumnLeaves() {
   const leavesContainer = document.getElementById('autumn-leaves');
